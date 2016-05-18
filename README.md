@@ -17,7 +17,7 @@ calling many methods on the same instance from different threads at the same tim
 Each source class (excluding the SystemOutClientListener) is an independent application with its own main() method. 
 They basically connect to the server and perform a subscription, printing on the console the incoming Item Updates.
 
-under src/quickstart you'll find: 
+Under src/quickstart you'll find: 
 * `SystemOutClientListener.kt` is a simple implementation of the ClientListener interface that is used by the other examples. An instance of this class, listening to
 a LightstreamerClient instance (through the addListener method) will print on the standard output informations about the status of the connection.
 * `Stocklist.kt` is a simple application that subscribes to 15 stocks (MERGE) and prints all the updates on the standard output
