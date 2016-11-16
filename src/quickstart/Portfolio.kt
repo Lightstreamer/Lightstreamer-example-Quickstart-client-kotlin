@@ -114,6 +114,10 @@ class Portfolio {
         override fun onUnsubscription() {
             println("Now unsubscribed from portfolio item")
         }
+        
+        fun onRealMaxFrequency(frequency: String) {
+          println("Frequency is " + frequency)
+      	}
 
     }
 

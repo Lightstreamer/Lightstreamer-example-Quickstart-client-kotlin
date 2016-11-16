@@ -94,6 +94,10 @@ class Stocklist {
         override fun onUnsubscription() {
             println("Now unsubscribed from chat item, no more messages will be received")
         }
+        
+        fun onRealMaxFrequency(frequency: String) {
+          println("Frequency is " + frequency)
+      	}
 
     }
 
