@@ -73,4 +73,4 @@ the arguments in the above command select the example to run (and must be either
 ## Lightstreamer Compatibility Notes 
 
 - Compatible with Lightstreamer Java SE Client API v. 3.0 or newer.
-- For Lightstreamer Allegro (+ Java SE Client API), Presto, Vivace.
+- Ensure that Java SE Client API is supported by Lightstreamer Server license configuration.
