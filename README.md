@@ -2,7 +2,7 @@
 
 The [Quickstart Example](https://github.com/Lightstreamer/Lightstreamer-example-Quickstart-client-java) provides the source code to build very simple and basic client applications, used to test the capability of the Client APIs to connect and receive data from Lightstreamer Server. The examples can be used to familiarize with the Client APIs and as a reference on how to use them, and can be used as a starting point for client application implementations.
 
-This project contains the [Kotlin](https://kotlinlang.org/) source files of the same sample applications, that shows how the [Lightstreamer Java SE Client API](http://docs.lightstreamer.com/api/ls-javase-client/latest/) can be used to connect to Lightstreamer Server.
+This project contains the [Kotlin](https://kotlinlang.org/) source files of the same sample applications, that shows how the [Lightstreamer Java SE Client API](https://lightstreamer.com/api/ls-javase-client/latest/) can be used to connect to Lightstreamer Server.
 
 
 ## Details
