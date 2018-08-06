@@ -7,7 +7,7 @@ This project contains the [Kotlin](https://kotlinlang.org/) source files of the 
 
 ## Details
 
-The [Lightstreamer Java SE Client API](http://www.lightstreamer.com/docs/client_javase_uni_api/index.html) is used to connect to Lightstreamer, subscribe to available
+The [Lightstreamer Java SE Client API](https://lightstreamer.com/api/ls-javase-client/latest/) is used to connect to Lightstreamer, subscribe to available
 items and to send messages to the server. Automatic reconnections and resubscriptions are offered out-of-the-box by the library itself. All the available methods are 
 non-blocking so they execute fast, network and other time-consuming operations are handled on dedicated threads; methods are synchronized among themselves though, so 
 calling many methods on the same instance from different threads at the same time might still slow down things a bit. 
