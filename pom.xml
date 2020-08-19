@@ -67,7 +67,7 @@
     <dependency>
       <groupId>com.lightstreamer</groupId>
       <artifactId>ls-javase-client</artifactId>
-      <version>3.0.0-b1</version>
+      <version>4.3.4</version>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
@@ -75,12 +75,4 @@
       <version>${kotlin.version}</version>
     </dependency>
   </dependencies>
-
-  <repositories>
-    <repository>
-      <id>weswit</id>
-      <name>Weswit repository</name>
-      <url>https://www.lightstreamer.com/repo/maven</url>
-    </repository>
-  </repositories>
 </project>
