@@ -42,7 +42,7 @@ class Stocklist {
 
     private class SystemOutSubscriptionListener : SubscriptionListener {
 
-        override fun onClearSnapshot(itemName: String, itemPos: Int) {
+        override fun onClearSnapshot(itemName: String?, itemPos: Int) {
             println("Server has cleared the current status of the chat")
         }
 
@@ -50,15 +50,15 @@ class Stocklist {
             //not on this subscription
         }
 
-        override fun onCommandSecondLevelSubscriptionError(code: Int, message: String, key: String) {
+        override fun onCommandSecondLevelSubscriptionError(code: Int, message: String?, key: String) {
             //not on this subscription
         }
 
-        override fun onEndOfSnapshot(arg0: String, arg1: Int) {
+        override fun onEndOfSnapshot(arg0: String?, arg1: Int) {
             println("Snapshot is now fully received, from now on only real-time messages will be received")
         }
 
-        override fun onItemLostUpdates(itemName: String, itemPos: Int, lostUpdates: Int) {
+        override fun onItemLostUpdates(itemName: String?, itemPos: Int, lostUpdates: Int) {
             println("$lostUpdates messages were lost")
         }
 
@@ -87,7 +87,7 @@ class Stocklist {
             println("Now subscribed to the chat item, messages will now start coming in")
         }
 
-        override fun onSubscriptionError(code: Int, message: String) {
+        override fun onSubscriptionError(code: Int, message: String?) {
             println("Cannot subscribe because of error $code: $message")
         }
 
@@ -95,7 +95,7 @@ class Stocklist {
             println("Now unsubscribed from chat item, no more messages will be received")
         }
         
-        fun onRealMaxFrequency(frequency: String) {
+        override fun onRealMaxFrequency(frequency: String?) {
           println("Frequency is " + frequency)
       	}
 

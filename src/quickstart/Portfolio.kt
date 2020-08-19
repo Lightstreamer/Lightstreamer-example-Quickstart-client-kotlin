@@ -41,7 +41,7 @@ class Portfolio {
         sub.requestedSnapshot = "yes"
         sub.dataAdapter = "PORTFOLIO_ADAPTER"
         sub.commandSecondLevelDataAdapter = "QUOTE_ADAPTER"
-        sub.commandSecondLevelFields = arrayOf("stock_name", "last_price") //the key values from the 1st level are used as item names for the second level
+        sub.setCommandSecondLevelFields(arrayOf("stock_name", "last_price")) //the key values from the 1st level are used as item names for the second level
 
         val subListener = SystemOutSubscriptionListener()
         sub.addListener(subListener)
@@ -52,7 +52,7 @@ class Portfolio {
 
     private class SystemOutSubscriptionListener : SubscriptionListener {
 
-        override fun onClearSnapshot(itemName: String, itemPos: Int) {
+        override fun onClearSnapshot(itemName: String?, itemPos: Int) {
             println("Server has cleared the current status of the portfolio")
         }
 
@@ -60,15 +60,15 @@ class Portfolio {
             println("$lostUpdates  messages were lost ($key)")
         }
 
-        override fun onCommandSecondLevelSubscriptionError(code: Int, message: String, key: String) {
+        override fun onCommandSecondLevelSubscriptionError(code: Int, message: String?, key: String) {
             println("Cannot subscribe (2nd-level item $key) because of error $code: $message")
         }
 
-        override fun onEndOfSnapshot(itemName: String, itemPos: Int) {
+        override fun onEndOfSnapshot(itemName: String?, itemPos: Int) {
             println("Initial portfolio received")
         }
 
-        override fun onItemLostUpdates(itemName: String, itemPos: Int, lostUpdates: Int) {
+        override fun onItemLostUpdates(itemName: String?, itemPos: Int, lostUpdates: Int) {
             println("$lostUpdates  messages were lost")
         }
 
@@ -107,7 +107,7 @@ class Portfolio {
             println("Now subscribed to the portfolio item")
         }
 
-        override fun onSubscriptionError(code: Int, message: String) {
+        override fun onSubscriptionError(code: Int, message: String?) {
             println("Cannot subscribe because of error $code: $message")
         }
 
@@ -115,7 +115,7 @@ class Portfolio {
             println("Now unsubscribed from portfolio item")
         }
         
-        fun onRealMaxFrequency(frequency: String) {
+        override fun onRealMaxFrequency(frequency: String?) {
           println("Frequency is " + frequency)
       	}
 
