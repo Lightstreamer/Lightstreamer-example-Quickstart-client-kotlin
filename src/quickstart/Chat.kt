@@ -130,11 +130,11 @@ class Chat {
             println("MESSAGE @ ${dateFormatter.format(time)} |${update.getValue("IP")}:${update.getValue("message")}")
         }
 
-        override fun onListenEnd(subscription: Subscription) {
+        override fun onListenEnd() {
             println("Stop listeneing to subscription events")
         }
 
-        override fun onListenStart(subscription: Subscription) {
+        override fun onListenStart() {
             println("Start listeneing to subscription events")
         }
 

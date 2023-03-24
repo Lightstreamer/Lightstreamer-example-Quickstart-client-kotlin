@@ -20,11 +20,11 @@ import com.lightstreamer.client.LightstreamerClient
 
 class SystemOutClientListener : ClientListener {
 
-    override fun onListenEnd(client: LightstreamerClient) {
+    override fun onListenEnd() {
         println("Stops listening to client events")
     }
 
-    override fun onListenStart(client: LightstreamerClient) {
+    override fun onListenStart() {
         println("Start listening to client events")
     }
 
