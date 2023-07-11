@@ -179,7 +179,7 @@ class Chat {
             println("message \"$originalMessage\" was not correctly processed by the server")
         }
 
-        override fun onProcessed(originalMessage: String) {
+        override fun onProcessed(originalMessage: String, response: String) {
             println("message \"$originalMessage\" processed correctly")
         }
     }
