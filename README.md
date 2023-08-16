@@ -25,6 +25,7 @@ a LightstreamerClient instance (through the addListener method) will print on th
 obtained using the same stock data (MERGE) used by the previous example.
 * `Chat.kt` is a simple application that subscribes to the chat item (DISTINCT) on a Lightstreamer server and then accepts command from the standard input to send messages,
 connect/disconnect subscribe/unsubscribe and others making it possible to easily experiment with the APIs
+* `Main.kt` utility class for launch through Maven.
 
 ![Screenshot](screen_large.png)
 
@@ -35,7 +36,7 @@ To build and install a version of this demo you have two options: either use [Ma
 
 In both cases, if you plan to point the examples to your own server, you'll need to install the following adapters (depending on which quickstart example
 you want to run you might not need them all):
-* The *CHAT_ROOM* (see the [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Chat-adapter-java)). 
+* The *CHAT_ROOM* (see the [Lightstreamer - Basic Chat Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Chat-adapter-java)). 
 * The *QUOTE_ADAPTER* (see the [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-StockList-adapter-java)) 
 * The *PORTFOLIO_ADAPTER* ( see the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java)), 
 
@@ -60,7 +61,6 @@ the arguments in the above command select the example to run (and must be either
 
 ### Lightstreamer Adapters Needed by This Client 
 
-* [Lightstreamer - Quickstart Example - Java SE Client](https://github.com/Lightstreamer/Lightstreamer-example-Quickstart-client-java)
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java)
 * [Lightstreamer - Chat Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Chat-adapter-java)
@@ -68,6 +68,7 @@ the arguments in the above command select the example to run (and must be either
 
 ### Related Projects
 
+* [Lightstreamer - Quickstart Example - Java SE Client](https://github.com/Lightstreamer/Lightstreamer-example-Quickstart-client-java)
 * [Lightstreamer - Basic Stock-List Demo - Java SE (Swing) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-java)
 
 ## Lightstreamer Compatibility Notes 
