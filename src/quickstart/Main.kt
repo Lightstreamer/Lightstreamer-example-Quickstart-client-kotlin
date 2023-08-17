@@ -30,6 +30,9 @@ fun main(args: Array<String>) {
             Portfolio().start(args[1])
             slumber()
         }
+        "orderentry" -> {
+            PortfolioOrderEntry.main(args.sliceArray(1 until args.size))
+        }
     }
 }
 
