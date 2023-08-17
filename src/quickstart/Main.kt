@@ -18,6 +18,7 @@
 package quickstart
 
 import java.util.concurrent.CountDownLatch
+import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
     when (args[0]) {
@@ -34,6 +35,7 @@ fun main(args: Array<String>) {
             PortfolioOrderEntry.main(args.sliceArray(1 until args.size))
         }
     }
+    exitProcess(0)
 }
 
 private fun slumber() {
